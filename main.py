@@ -52,12 +52,12 @@ def convert(message: telebot.types.Message):
 
     else:
         if total_base  < 1:  # Check if total_base has a decimal part
-            total_base_formatted = format(total_base, ".5f").rstrip("0")
-        else: total_base_formatted = str(total_base)
+            total_base = format(total_base, ".5f").rstrip("0")
+        else: total_base
 
         # If the formatted value ends in a decimal point, remove it to
 
-    text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base_formatted}'
+    text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base}'
     bot.send_message(message.chat.id, text)
 
 bot.polling()
