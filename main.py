@@ -59,6 +59,8 @@ def convert(message: telebot.types.Message):
 
     text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base}'
     bot.reply_to(message, text)
+    #add log
+    print(message.from_user.username, message.text, total_base)
 
 bot.polling()
 
