@@ -32,6 +32,7 @@ def help(message: telebot.types.Message):
 
 @bot.message_handler(commands=['convert'])
 def convert(message: telebot.types.Message):
+    print(message.from_user.username)
     if '/convert' not in message.text:
         # The command is not present in the message, so do not try to process it
         return
