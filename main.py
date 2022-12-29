@@ -54,11 +54,11 @@ def convert(message: telebot.types.Message):
 
     else:
         if total_base  < 1:  # Check if total_base has a decimal part
-            total_base = format(total_base, ".5f").rstrip("0")
-        else: total_base = format(total_base, ".3f").rstrip("0")
+            total_base = format(total_base, ",.5f").rstrip("0")
+        else: total_base = format(total_base, ",.3f").rstrip("0")
 
         # If the formatted value ends in a decimal point, remove it to
-        text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base}'
+        text = f'Price {amount} {base.upper()} in {quote.upper()} = {quote.upper()} {total_base}'
         bot.reply_to(message, text)
         #add log
         print(message.from_user.username, message.text, total_base)
