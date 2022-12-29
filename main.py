@@ -9,7 +9,7 @@ Use /help for the full list of options.
 
 import telebot
 
-from config import keys, TOKEN
+from config import TOKEN
 from utils import CryptoConverter, CryptoConvertBotException
 
 bot = telebot.TeleBot(TOKEN)
