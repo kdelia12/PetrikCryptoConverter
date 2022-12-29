@@ -43,6 +43,7 @@ def convert(message: telebot.types.Message):
             raise CryptoConvertBotException('Not three parameters')
 
         amount, base, quote,  = values[1:]  # Skip the first element, which is the command
+        amount = amount.replace(",", ".")
         total_base = CryptoConverter.convert(base.upper(), quote.upper(),amount.upper()) 
     except CryptoConvertBotException as e:
         bot.reply_to(message, f'User error.\n{e}')
