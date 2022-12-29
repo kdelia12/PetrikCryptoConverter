@@ -32,7 +32,7 @@ def help(message: telebot.types.Message):
 
 @bot.message_handler(commands=['convert'])
 def convert(message: telebot.types.Message):
-    print(message.from_user.username)
+    print(message.from_user.username,message.text,)
     if '/convert' not in message.text:
         # The command is not present in the message, so do not try to process it
         return
@@ -50,7 +50,7 @@ def convert(message: telebot.types.Message):
         bot.reply_to(message, f'User error.\n{e}')
 
     except Exception as e:
-        bot.reply_to(message, f'Could not process command\n{e}')
+        bot.reply_to(message, f'Currency salah blok!')
 
     else:
         if total_base  < 1:  # Check if total_base has a decimal part
@@ -58,10 +58,10 @@ def convert(message: telebot.types.Message):
         else: total_base = format(total_base, ".3f").rstrip("0")
 
         # If the formatted value ends in a decimal point, remove it to
-    text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base}'
-    bot.reply_to(message, text)
-    #add log
-    print(message.from_user.username, message.text, total_base)
+        text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base}'
+        bot.reply_to(message, text)
+        #add log
+        print(message.from_user.username, message.text, total_base)
 
 bot.polling()
 
