@@ -58,7 +58,6 @@ def convert(message: telebot.types.Message):
         else: total_base = format(total_base, ".3f").rstrip("0")
 
         # If the formatted value ends in a decimal point, remove it to
-
     text = f'Price {amount} {base.upper()} in {quote.upper()} = {total_base}'
     bot.reply_to(message, text)
     #add log
