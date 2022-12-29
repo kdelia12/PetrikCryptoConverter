@@ -3,7 +3,7 @@ Configuration file for Telegram bot
 '''
 
 # Telegram bot token
-TOKEN = '5706739343:AAFmMmwSiPPghZFV_04H5mcoeU6A2UWRaDA'
+TOKEN = ''
 
 # The list of supported currencies.
 # From cryptocompare.com API.
