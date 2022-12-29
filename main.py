@@ -54,7 +54,7 @@ def convert(message: telebot.types.Message):
     else:
         if total_base  < 1:  # Check if total_base has a decimal part
             total_base = format(total_base, ".5f").rstrip("0")
-        else: total_base
+        else: total_base = format(total_base, ".3f").rstrip("0")
 
         # If the formatted value ends in a decimal point, remove it to
 
