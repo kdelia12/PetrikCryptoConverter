@@ -63,7 +63,8 @@ def convert(message: telebot.types.Message):
         #add log
         print(message.from_user.username, message.text, total_base)
 
-bot.polling()
+bot.infinity_polling(timeout=30, long_polling_timeout=10)
+
 
 
 #def main():
