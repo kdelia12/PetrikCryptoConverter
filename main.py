@@ -1,12 +1,3 @@
-'''
-A Telegram bot that convert a currency into another.
-Example:
-In Telegram: bitcoin dollar 2
-- shows the price of 2 bitcoins in US dollars.
-Also options are available in the bot.
-Use /help for the full list of options.
-'''
-
 import telebot
 
 from config import TOKEN
